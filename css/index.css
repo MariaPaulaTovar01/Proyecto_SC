@@ -13,7 +13,10 @@ body {
     font-size: 16px;
     font-weight: bold;
 }
-
+.top-bar.hidden {
+    transform: translateY(-100%);
+    transition: transform 0.3s ease; /* Agrega una transición suave */
+  }
 .contact-info {
     display: flex;
     align-items: center;
@@ -68,7 +71,7 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
+    padding: 10px;
     background: white;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
@@ -156,45 +159,179 @@ nav {
     background-color: #0056b3; /* Azul más oscuro al pasar el mouse */
 }
 
-
+/* Sección Hero con Video de Fondo */
 .hero {
+    position: relative;
     display: flex;
     align-items: center;
-    padding: 50px 20px;
+    justify-content: space-between;
+    height: 100vh;
+    overflow: hidden;
+    padding: 0 5%;
 }
 
-.hero .hero-content {
-    flex: 1;
+/* Estilos del video */
+.hero-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
 }
 
-.hero .hero-content h1 {
-    font-size: 3em;
-    margin-bottom: 20px;
+/* Oscurecer el video */
+.hero::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 0;
 }
 
-.hero .hero-content p {
-    font-size: 1.2em;
-    margin-bottom: 30px;
-}
-
-.hero .hero-content .btn {
-    background-color: #ff9800;
+/* Contenido del hero */
+.hero-content {
+    max-width: 40%;
     color: white;
-    padding: 15px 30px;
-    border-radius: 5px;
+    text-align: left;
+    position: relative;
+    z-index: 1;
+}
+
+/* Estilo del título */
+.hero-title {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.hero-title .logo {
+    width: 110px;
+    height: auto;
+}
+/* Transiciones para el carrusel */
+.hero-title .logo,
+.hero-title .correo,
+.hero-title .certificado,
+.hero-description {
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.hero-title .title-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.hero-title .correo {
+    font-size: 2.8em;
+    font-weight: bold;
+}
+
+.hero-title .certificado {  
+    font-size: 3.8em;
+    font-weight: bold;
+}
+
+.hero-description {
+    font-size: 1.5em;
+    margin: 25px 0;
+}
+
+/* Botón */
+.cta-button {
+    background-color: rgb(255, 153, 59);
+    color: white;
+    padding: 20px 35px;
+    border-radius: 8px;
     text-decoration: none;
     font-weight: bold;
-
-    
+    font-size: 1.1em;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease;
 }
 
-.hero .hero-image {
-    flex: 1;
-    text-align: center;
+.cta-button:hover {
+    background-color: #ffd9a6;
 }
 
-.hero .hero-image img {
-    max-width: 100%;
+/* Carrusel */
+.carousel {
+    position: relative;
+    z-index: 1;
+}
+
+/* Contenedor vertical para prev, indicadores y next */
+.carousel-controls {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    right: 1%; /* Más a la derecha */
+    top: 50%;
+    transform: translateY(-50%);
+    gap: 20px;
+}
+
+
+/* Flechas de navegación */
+.carousel-prev,
+.carousel-next {
+    background: none; /* Sin fondo */
+    color: white;
+    border: none;
+    padding: 0; /* Sin relleno */
+    font-size: 2.5em; /* Aumenta el tamaño de la flecha */
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.carousel-prev:hover,
+.carousel-next:hover {
+    transform: scale(1.2);
+}
+.carousel-transition {
+    opacity: 0.5;
+    transform: translateY(20px);
+}
+/* Indicadores del carrusel */
+.carousel-indicators {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.indicator {
+    width: 14px;
+    height: 14px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+    position: relative; /* Necesario para el círculo interno */
+}
+
+.indicator.active {
+    background-color: white; /* Fondo blanco para el borde */
+    border: 2px solid #00bcd4; /* Borde azul */
+}
+
+.indicator.active::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 6px; /* Tamaño del círculo interno */
+    height: 6px;
+    background-color: #00bcd4; /* Círculo interno azul */
+    border-radius: 50%;
 }
 /* Estilos para la sección de Servicios Destacados */
 .services {
