@@ -1,63 +1,83 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Software Colombia</title>
-    <link rel="stylesheet" href="/css/index.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!DOCTYPE html>
+    <html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Software Colombia</title>
+        <link rel="stylesheet" href="/css/index.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-</head>
-<body>
-    <header>
-        <div class="top-bar">
-            <div class="contact-info">
-                <a href="mailto:info@software-colombia.com">
-                    <i class="fas fa-envelope"></i> info@software-colombia.com
-                </a>
-                <span class="separator"></span>
-                <a href="tel:+576013082152">
-                    <i class="fas fa-phone"></i> +(57)(601) 308-2152
-                </a>
+    </head>
+    <body>
+        <header>
+            <div class="top-bar">
+                <div class="contact-info">
+                    <a href="mailto:info@software-colombia.com">
+                        <i class="fas fa-envelope"></i> info@software-colombia.com
+                    </a>
+                    <span class="separator"></span>
+                    <a href="tel:+576013082152">
+                        <i class="fas fa-phone"></i> +(57)(601) 308-2152
+                    </a>
+                </div>
+                <div class="social-links">
+                    <span>Síguenos:</span>
+                    <a href="#" class="icon facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="#" class="icon twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="icon linkedin"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" class="icon instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="icon youtube"><i class="fab fa-youtube"></i></a>
+                    <a href="#" class="language"><i class="fas fa-globe"></i> EN</a>
+                </div>
             </div>
-            <div class="social-links">
-                <span>Síguenos:</span>
-                <a href="#" class="icon facebook"><i class="fab fa-facebook"></i></a>
-                <a href="#" class="icon twitter"><i class="fab fa-twitter"></i></a>
-                <a href="#" class="icon linkedin"><i class="fab fa-linkedin"></i></a>
-                <a href="#" class="icon instagram"><i class="fab fa-instagram"></i></a>
-                <a href="#" class="icon youtube"><i class="fab fa-youtube"></i></a>
-                <a href="#" class="language"><i class="fas fa-globe"></i> EN</a>
-            </div>
-        </div>
+            
+            
+            <nav>
+                <div class="logo-container">
+                    <img src="/img/logo.png" alt="Software Colombia" class="logo">
+                </div>
+                <ul class="nav-links">
+                    <li><a href="#">INICIO</a></li>
+                    <li><a href="#">NUESTROS SERVICIOS</a></li>
+                    <li><a href="#">SOFTWARE A LA MEDIDA</a></li>
+                    <li><a href="#">CLIENTES</a></li>
+                    <li><a href="https://software-colombia.com/nosotros/">NOSOTROS</a></li>
+                    <li><a href="#">BLOG</a></li>
+                    <li><a href="#" class="contact-btn">CONTACTO</a></li>
+                </ul>
+            </nav>
+            <section class="hero">
+                <video autoplay loop muted playsinline class="hero-video">
+                    <source src="/videos/video-bg.mp4">
+                    Tu navegador no soporta el elemento de video.
+                </video>
+                
+                <div class="hero-content">
+                    <div class="hero-title">
+                        <img src="/img/Scmail.png" alt="Logo" class="logo">
+                        <div class="title-text">
+                            <span class="correo">Correo</span>
+                            <span class="certificado">Certificado</span>
+                        </div>
+                    </div>
+                    <p class="hero-description">Plataforma única de comunicaciones certificadas</p>
+                    <button class="cta-button">OBTENER INFO ></button>
+                </div>
+            
+                <div class="carousel">
+                    <div class="carousel-controls">
+                        <button class="carousel-prev">&#10095;</button> <div class="carousel-indicators">
+                            <span class="indicator active"></span>
+                            <span class="indicator"></span>
+                            <span class="indicator"></span>
+                        </div>
+                        <button class="carousel-next">&#10094;</button> 
+                    </div>
+                </div>
+            </section>
+            
+        </header>
         
-        
-        <nav>
-            <div class="logo-container">
-                <img src="/img/logo.png" alt="Software Colombia" class="logo">
-            </div>
-            <ul class="nav-links">
-                <li><a href="#">INICIO</a></li>
-                <li><a href="#">NUESTROS SERVICIOS</a></li>
-                <li><a href="#">SOFTWARE A LA MEDIDA</a></li>
-                <li><a href="#">CLIENTES</a></li>
-                <li><a href="#">NOSOTROS</a></li>
-                <li><a href="#">BLOG</a></li>
-                <li><a href="#" class="contact-btn">CONTACTO</a></li>
-            </ul>
-        </nav>
-        <div class="hero">
-            <div class="hero-content">
-                <h1>Correo Certificado</h1>
-                <p>Plataforma unificada de comunicaciones certificadas.</p>
-                <a href="#" class="btn">OBTENER INFO ></a>
-            </div>
-            <div class="hero-image">
-                <img src="hero-image.png" alt="Correo Certificado">
-            </div>
-        </div>
-    </header>
-    
     <section class="services">
         <p class="subtitle">Empresa de Software</p>
         <h2>Servicios Destacados</h2>
@@ -169,6 +189,6 @@
         </div>
     </footer>
     
-    <script src="script.js"></script>
+    <script src="/js/script.js"></script>
 </body>
 </html>
