@@ -336,8 +336,10 @@ nav {
 /* Estilos para la sección de Servicios Destacados */
 .services {
     text-align: center;
-    padding: 40px 20px;
+    padding: 80px 20px;
     background-color: #f8f9fa;
+    position: relative;
+    overflow: visible;
 }
 
 .subtitle {
@@ -353,9 +355,9 @@ h2 {
 }
 
 .title-underline {
-    width: 50px;
+    width: 100px;
     height: 4px;
-    background-color: #00a7e1;
+    background-color: rgb(255, 153, 59);
     margin: 10px auto;
     border-radius: 2px;
 }
@@ -364,14 +366,14 @@ h2 {
     font-size: 18px;
     color: #555;
     max-width: 600px;
-    margin: 0 auto 40px;
+    margin: 0 auto 70px;
 }
 
 .services-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 20px;
+    gap: 20px 30px;
     align-items: stretch;
 }
 
@@ -389,6 +391,7 @@ h2 {
     align-items: center;
     position: relative;
     overflow: visible;
+    margin-bottom: 30px;
 }
 
 .service-card:hover {
@@ -398,7 +401,7 @@ h2 {
 .service-icon {
     width: 80px;
     height: auto;
-    margin-bottom: 15px;
+    margin-bottom: 50px; /* Aumenta el margen inferior del icono */
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -407,14 +410,14 @@ h2 {
 h3 {
     font-size: 20px;
     color: #333;
-    margin-bottom: 5px;
+    margin-bottom: 15px; /* Aumenta el margen inferior del título */
 }
 
 .service-title {
     font-weight: bold;
     font-size: 18px;
-    color: #007bff;
-    margin-bottom: 5px;
+    color: rgba(0, 0, 0, 0.7);
+    margin-bottom: 10px; /* Aumenta el margen inferior del subtítulo */
     position: relative;
 }
 
@@ -430,13 +433,13 @@ h3 {
 p {
     font-size: 16px;
     color: #666;
-    margin-bottom: 15px;
+    margin-bottom: 20px; /* Aumenta el margen inferior del párrafo */
     flex-grow: 1;
 }
 
 .btn {
     display: inline-block;
-    padding: 10px 20px;
+    padding: 8px 30px;
     background-color: #00a7e1;
     color: white;
     text-decoration: none;
@@ -446,9 +449,10 @@ p {
     align-self: center;
     margin-top: auto;
     position: absolute;
-    bottom: -20px;
+    bottom: 10px; /* Ajusta la posición del botón */
     left: 50%;
     transform: translateX(-50%);
+    white-space: nowrap;
 }
 
 .btn:hover {
@@ -464,7 +468,7 @@ p {
 }
 
 .service-card.special {
-    width: 45%; /* Ajuste para hacerlos más grandes */
+    width: 45%;
 }
 
 /* Botón de más servicios */
@@ -472,12 +476,10 @@ p {
     margin-top: 30px;
     text-align: center;
     font-weight: bold;
-
-    
 }
 
 .more-services .btn {
-    background-color: #ff9800;
+    background-color: rgb(255, 153, 59);
     color: white;
     padding: 15px 25px;
     font-size: 1rem;
@@ -487,6 +489,42 @@ p {
 
 .more-services .btn:hover {
     background-color: #e68900;
+}
+
+.service-card {
+    position: relative;
+    overflow: visible;
+    transition: transform 0.3s ease;
+}
+
+.service-card:hover {
+    transform: scale(1.05);
+}
+
+.service-icon-container {
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
+.service-icon {
+    width: 100%;
+    height: auto;
+}
+
+.service-button-container {
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
 }
 /* Estilos para la sección Nuestra Compañía */
 .company-section {
