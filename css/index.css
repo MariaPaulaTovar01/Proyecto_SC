@@ -531,85 +531,60 @@ p {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #e3f5f9;
-    padding: 50px;
+    background-color: rgba(9, 172, 196, 0.1) !important;
+    padding: 60px 80px;
     border-radius: 10px;
     margin-top: 50px;
 }
 
 .company-section img {
-    width: 45%;
+    width: 55%;
     border-radius: 10px;
 }
 
 .company-content {
-    width: 50%;
+    width: 45%;
     text-align: left;
-}
-
-.company-content h2 {
-    font-size: 2rem;
-    color: #333;
-}
-
-.company-content p {
-    font-size: 1rem;
-    color: #666;
-    margin-top: 10px;
-}
-
-.company-content .btn {
-    background-color: #00bcd4;
-    color: white;
-    padding: 10px 20px;
-    font-size: 1rem;
-    border-radius: 5px;
-    text-decoration: none;
-    display: inline-block;
-    margin-top: 20px;
-}
-
-.company-content .btn:hover {
-    background-color: #008c9e;
-}
-
-/* Estilos para la sección Nuestra Compañía */
-.company-section {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: #e3f5f9;
-    padding: 50px;
-    border-radius: 10px;
-    margin-top: 50px;
+    flex-direction: column;
 }
 
-.company-section img {
-    width: 45%;
-    border-radius: 10px;
-}
-
-.company-content {
-    width: 50%;
-    text-align: left;
+.company-content .btn_COMPA {
+    background-color: #00bcd4;
+    color: white;
+    padding: 12px 30px;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: auto;
+    width: 150px;
+    text-align: center;
 }
 
 .company-content h2 {
-    font-size: 2rem;
+    font-size: 2.5rem;
     color: #333;
+    margin-bottom: 20px;
+    border-bottom: 3px solid rgb(255, 153, 59);
+    width: 100px;
+    padding-bottom: 10px;
+    display: inline-block;
+    white-space: nowrap; /* Evita que el título se divida en varias líneas */
 }
 
 .company-content p {
-    font-size: 1rem;
+    font-size: 1.1rem;
     color: #666;
-    margin-top: 10px;
+    line-height: 1.6;
+    margin-bottom: 30px;
 }
 
 .company-content .btn {
     background-color: #00bcd4;
     color: white;
-    padding: 10px 20px;
-    font-size: 1rem;
+    padding: 12px 30px;
+    font-size: 1.1rem;
     border-radius: 5px;
     text-decoration: none;
     display: inline-block;
@@ -619,7 +594,6 @@ p {
 .company-content .btn:hover {
     background-color: #008c9e;
 }
-
 /* Estilos para el carrusel de clientes */
 .clients-section {
     text-align: center;
