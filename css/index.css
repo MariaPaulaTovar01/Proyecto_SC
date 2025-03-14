@@ -13,10 +13,12 @@ body {
     font-size: 16px;
     font-weight: bold;
 }
+
 .top-bar.hidden {
     transform: translateY(-100%);
-    transition: transform 0.3s ease; /* Agrega una transición suave */
-  }
+    transition: transform 0.3s ease;
+}
+
 .contact-info {
     display: flex;
     align-items: center;
@@ -25,7 +27,7 @@ body {
 .contact-info a {
     color: #333;
     text-decoration: none;
-    margin: 0 8px; /* Reduce el espacio horizontal */
+    margin: 0 8px;
     transition: color 0.3s;
     padding: 5px;
     border-radius: 5px;
@@ -39,10 +41,10 @@ body {
 }
 
 .contact-info .separator {
-    height: 15px; /* Altura de la línea */
-    width: 1px; /* Grosor de la línea */
-    background-color: #ccc; /* Color sutil */
-    margin: 0 8px; /* Espaciado a los lados */
+    height: 15px;
+    width: 1px;
+    background-color: #ccc;
+    margin: 0 8px;
 }
 
 .social-links {
@@ -57,7 +59,7 @@ body {
 .social-links a {
     color: #333;
     text-decoration: none;
-    margin: 0 5px; /* Reduce el espacio entre iconos */
+    margin: 0 5px;
     font-size: 16px;
     transition: color 0.3s;
 }
@@ -65,7 +67,6 @@ body {
 .social-links a:hover {
     color: #000;
 }
-
 
 nav {
     display: flex;
@@ -110,7 +111,6 @@ nav {
     position: relative;
 }
 
-/* Efecto de subrayado */
 .nav-links a::after {
     content: "";
     position: absolute;
@@ -124,14 +124,12 @@ nav {
     transition: transform 0.3s ease-in-out;
 }
 
-/* Mostrar el subrayado al pasar el mouse */
 .nav-links a:hover::after {
     transform: scaleX(1);
 }
 
-/* Estilos para que el botón INICIO siempre esté subrayado */
 .nav-links li:first-child a {
-    color: black !important; /* Letras blancas */
+    color: black !important;
 }
 
 .nav-links li:first-child a::after {
@@ -139,27 +137,25 @@ nav {
 }
 
 .contact-btn {
-    background-color: #007bff; /* Azul */
-    color: white !important; /* Letras blancas */
-    padding: 12px 24px; /* Ajusta el tamaño del botón */
+    background-color: #007bff;
+    color: white !important;
+    padding: 12px 24px;
     border-radius: 5px;
     font-weight: bold;
-    text-decoration: none !important; /* Elimina cualquier subrayado */
-    display: inline-block; /* Evita comportamientos no deseados */
+    text-decoration: none !important;
+    display: inline-block;
     transition: background-color 0.3s ease-in-out;
-    border: none; /* Asegura que no haya bordes extra */
+    border: none;
 }
 
-/* Elimina cualquier subrayado de forma adicional */
 .contact-btn::after {
     display: none !important;
 }
 
 .contact-btn:hover {
-    background-color: #0056b3; /* Azul más oscuro al pasar el mouse */
+    background-color: #0056b3;
 }
 
-/* Sección Hero con Video de Fondo */
 .hero {
     position: relative;
     display: flex;
@@ -170,7 +166,6 @@ nav {
     padding: 0 5%;
 }
 
-/* Estilos del video */
 .hero-video {
     position: absolute;
     top: 50%;
@@ -182,7 +177,6 @@ nav {
     z-index: -1;
 }
 
-/* Oscurecer el video */
 .hero::after {
     content: "";
     position: absolute;
@@ -194,7 +188,6 @@ nav {
     z-index: 0;
 }
 
-/* Contenido del hero */
 .hero-content {
     max-width: 40%;
     color: white;
@@ -203,7 +196,6 @@ nav {
     z-index: 1;
 }
 
-/* Estilo del título */
 .hero-title {
     display: flex;
     align-items: center;
@@ -213,13 +205,6 @@ nav {
 .hero-title .logo {
     width: 110px;
     height: auto;
-}
-/* Transiciones para el carrusel */
-.hero-title .logo,
-.hero-title .correo,
-.hero-title .certificado,
-.hero-description {
-    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
 }
 
 .hero-title .title-text {
@@ -232,7 +217,7 @@ nav {
     font-weight: bold;
 }
 
-.hero-title .certificado {  
+.hero-title .certificado {
     font-size: 3.8em;
     font-weight: bold;
 }
@@ -242,7 +227,6 @@ nav {
     margin: 25px 0;
 }
 
-/* Botón */
 .cta-button {
     background-color: rgb(255, 153, 59);
     color: white;
@@ -260,33 +244,29 @@ nav {
     background-color: #ffd9a6;
 }
 
-/* Carrusel */
 .carousel {
     position: relative;
     z-index: 1;
 }
 
-/* Contenedor vertical para prev, indicadores y next */
 .carousel-controls {
     display: flex;
     flex-direction: column;
     align-items: center;
     position: absolute;
-    right: 1%; /* Más a la derecha */
+    right: 1%;
     top: 50%;
     transform: translateY(-50%);
     gap: 20px;
 }
 
-
-/* Flechas de navegación */
 .carousel-prev,
 .carousel-next {
-    background: none; /* Sin fondo */
+    background: none;
     color: white;
     border: none;
-    padding: 0; /* Sin relleno */
-    font-size: 2.5em; /* Aumenta el tamaño de la flecha */
+    padding: 0;
+    font-size: 2.5em;
     cursor: pointer;
     transition: transform 0.2s;
 }
@@ -295,11 +275,7 @@ nav {
 .carousel-next:hover {
     transform: scale(1.2);
 }
-.carousel-transition {
-    opacity: 0.5;
-    transform: translateY(20px);
-}
-/* Indicadores del carrusel */
+
 .carousel-indicators {
     display: flex;
     flex-direction: column;
@@ -314,12 +290,12 @@ nav {
     border-radius: 50%;
     cursor: pointer;
     transition: background 0.3s, transform 0.2s;
-    position: relative; /* Necesario para el círculo interno */
+    position: relative;
 }
 
 .indicator.active {
-    background-color: white; /* Fondo blanco para el borde */
-    border: 2px solid #00bcd4; /* Borde azul */
+    background-color: white;
+    border: 2px solid #00bcd4;
 }
 
 .indicator.active::before {
@@ -328,12 +304,12 @@ nav {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 6px; /* Tamaño del círculo interno */
+    width: 6px;
     height: 6px;
-    background-color: #00bcd4; /* Círculo interno azul */
+    background-color: #00bcd4;
     border-radius: 50%;
 }
-/* Estilos para la sección de Servicios Destacados */
+
 .services {
     text-align: center;
     padding: 80px 20px;
@@ -401,7 +377,7 @@ h2 {
 .service-icon {
     width: 80px;
     height: auto;
-    margin-bottom: 50px; /* Aumenta el margen inferior del icono */
+    margin-bottom: 50px;
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -410,14 +386,14 @@ h2 {
 h3 {
     font-size: 20px;
     color: #333;
-    margin-bottom: 15px; /* Aumenta el margen inferior del título */
+    margin-bottom: 15px;
 }
 
 .service-title {
     font-weight: bold;
     font-size: 18px;
     color: rgba(0, 0, 0, 0.7);
-    margin-bottom: 10px; /* Aumenta el margen inferior del subtítulo */
+    margin-bottom: 10px;
     position: relative;
 }
 
@@ -433,7 +409,7 @@ h3 {
 p {
     font-size: 16px;
     color: #666;
-    margin-bottom: 20px; /* Aumenta el margen inferior del párrafo */
+    margin-bottom: 20px;
     flex-grow: 1;
 }
 
@@ -449,7 +425,7 @@ p {
     align-self: center;
     margin-top: auto;
     position: absolute;
-    bottom: 10px; /* Ajusta la posición del botón */
+    bottom: 10px;
     left: 50%;
     transform: translateX(-50%);
     white-space: nowrap;
@@ -459,7 +435,6 @@ p {
     background-color: #007bff;
 }
 
-/* Estilo especial para los dos últimos servicios */
 .special-container {
     display: flex;
     justify-content: center;
@@ -471,7 +446,6 @@ p {
     width: 45%;
 }
 
-/* Botón de más servicios */
 .more-services {
     margin-top: 30px;
     text-align: center;
@@ -491,16 +465,6 @@ p {
     background-color: #e68900;
 }
 
-.service-card {
-    position: relative;
-    overflow: visible;
-    transition: transform 0.3s ease;
-}
-
-.service-card:hover {
-    transform: scale(1.05);
-}
-
 .service-icon-container {
     position: absolute;
     top: -20px;
@@ -514,11 +478,6 @@ p {
     z-index: 1;
 }
 
-.service-icon {
-    width: 100%;
-    height: auto;
-}
-
 .service-button-container {
     position: absolute;
     bottom: -20px;
@@ -526,7 +485,7 @@ p {
     transform: translateX(-50%);
     z-index: 1;
 }
-/* Estilos para la sección Nuestra Compañía */
+
 .company-section {
     display: flex;
     align-items: center;
@@ -570,7 +529,7 @@ p {
     width: 100px;
     padding-bottom: 10px;
     display: inline-block;
-    white-space: nowrap; /* Evita que el título se divida en varias líneas */
+    white-space: nowrap;
 }
 
 .company-content p {
@@ -594,56 +553,66 @@ p {
 .company-content .btn:hover {
     background-color: #008c9e;
 }
-/* Estilos para el carrusel de clientes */
-.clients-section {
-    text-align: center;
-    padding: 50px 0;
-    background-color: white;
-}
 
-.clients-section h2 {
-    font-size: 2rem;
-    color: #333;
-}
-
-.clients-section p {
-    font-size: 1rem;
-    color: #666;
-    margin-bottom: 20px;
-}
-.clients-slider .swiper-wrapper {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-}
-
-.clients-slider .swiper-slide {
-    flex: 0 0 auto;
-    width: auto;
-    margin: 0 10px; /* Espaciado entre logos */
-}
-
-.clients-slider img {
-    max-width: 100px; /* Ajusta el tamaño según necesites */
-    height: auto;
-}
-
-
-.swiper {
-    width: 80%;
+.clientes {
+    padding: 40px 20px;
+    max-width: 1200px;
     margin: auto;
 }
 
-.swiper-slide img {
-    width: 150px;
-    filter: grayscale(100%);
-    transition: filter 0.3s;
+.carousel-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    max-width: 100%;
+    margin: auto;
 }
 
-.swiper-slide img:hover {
+.carousel-track-wrapper {
+    overflow: hidden;
+    width: 80%;
+    max-width: 1000px;
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: max-content;
+    align-items: center;
+}
+
+.carousel-track img {
+    max-width: 150px;
+    margin: 0 25px;
+    filter: grayscale(100%);
+    transition: filter 0.3s ease-in-out;
+}
+
+.carousel-track img:hover {
     filter: grayscale(0%);
 }
+
+.arrow {
+    position: absolute;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: orange;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#prev {
+    left: 10px;
+}
+
+#next {
+    right: 10px;
+}
+
 footer {
     background-color: #e3f2f7;
     padding: 40px 20px;
@@ -748,4 +717,171 @@ footer {
 
 .footer-bottom a:hover {
     text-decoration: underline;
+}
+
+/* Media Queries para Responsive Design */
+
+@media (max-width: 1200px) {
+    .hero-content {
+        max-width: 50%;
+    }
+
+    .company-section {
+        padding: 40px;
+    }
+
+    .company-section img {
+        width: 50%;
+    }
+
+    .company-content {
+        width: 50%;
+    }
+}
+
+@media (max-width: 992px) {
+    .hero-content {
+        max-width: 60%;
+    }
+
+    .company-section {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .company-section img {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+
+    .company-content {
+        width: 80%;
+        text-align: center;
+    }
+
+    .company-content h2 {
+        margin: 0 auto 20px;
+    }
+
+    .services-container {
+        gap: 20px;
+    }
+
+    .service-card {
+        width: 45%;
+    }
+
+    .special-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .service-card.special {
+        width: 80%;
+    }
+}
+
+@media (max-width: 768px) {
+    .top-bar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+    }
+
+    .contact-info {
+        margin-bottom: 10px;
+    }
+
+    .hero-content {
+        max-width: 80%;
+    }
+
+    .hero-title {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .hero-title .logo {
+        margin-bottom: 20px;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+    }
+
+    .services-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .service-card {
+        width: 80%;
+    }
+
+    .carousel-controls {
+        right: 5%;
+    }
+
+    .carousel-track img {
+        max-width: 100px;
+        margin: 0 15px;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-links,
+    .footer-info {
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-content {
+        max-width: 90%;
+    }
+
+    .hero-title .correo {
+        font-size: 2em;
+    }
+
+    .hero-title .certificado {
+        font-size: 3em;
+    }
+
+    .hero-description {
+        font-size: 1.2em;
+    }
+
+    .cta-button {
+        padding: 15px 25px;
+        font-size: 1em;
+    }
+
+    .service-card {
+        width: 100%;
+    }
+
+    .carousel-track img {
+        max-width: 80px;
+        margin: 0 10px;
+    }
+
+    .footer-logo img {
+        width: 80px;
+    }
+
+    .footer-links,
+    .footer-info {
+        max-width: 100%;
+    }
 }
