@@ -108,3 +108,56 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
+
+
+    // Auto-rotación (opcional)
+    setInterval(nextSlide, 5000); // Cambia cada 5 segundos
+    /* JavaScript */
+
+});
+document.addEventListener("DOMContentLoaded", function () {
+    const track = document.querySelector(".carousel-track");
+    const images = Array.from(document.querySelectorAll(".carousel-track img"));
+    const prev = document.getElementById("prev");
+    const next = document.getElementById("next");
+    let index = 0;
+    let autoSlideInterval;
+
+    function updateCarousel() {
+        track.style.transition = "transform 0.5s ease-in-out";
+        track.style.transform = `translateX(-${index * 210}px)`;
+    }
+
+    function moveSlide(direction) {
+        index += direction;
+        if (index >= images.length) {
+            index = 0;
+            track.style.transition = "none";
+            track.style.transform = "translateX(0px)";
+        } else if (index < 0) {
+            index = images.length - 1;
+            track.style.transition = "none";
+            track.style.transform = `translateX(-${index * 210}px)`;
+        }
+        setTimeout(updateCarousel, 50);
+    }
+
+    function autoSlide() {
+        moveSlide(1);
+    }
+
+    function startAutoSlide() {
+        autoSlideInterval = setInterval(autoSlide, 3000);
+    }
+
+    function stopAutoSlide() {
+        clearInterval(autoSlideInterval);
+    }
+
+    next.addEventListener("click", () => moveSlide(1));
+    prev.addEventListener("click", () => moveSlide(-1));
+    track.addEventListener("mouseenter", stopAutoSlide);
+    track.addEventListener("mouseleave", startAutoSlide);
+    startAutoSlide();
+});
+
