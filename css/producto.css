@@ -1,0 +1,291 @@
+.hero {
+    background: url('./../img/background_elogicwf.jpeg') center/cover no-repeat;
+    background-attachment: scroll; 
+    background-position: center top;
+    height: 63vh;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    color: white;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+    padding-left: 12%;
+    text-align: left;
+}
+
+
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(189, 183, 183, 0.3); 
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    gap: 2px;
+    max-width: 500px;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.hero-content p {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.buttons {
+    display: flex;
+    gap: 18px;
+}
+
+.button {
+    padding: 12px 28px;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    text-decoration: none;
+    color: white;
+    transition: transform 0.2s ease-in-out;
+}
+
+.button.access {
+    background-color: #f89b29;
+}
+
+.button.data-sheet {
+    background-color: #0aa0e0;
+}
+
+.button:hover {
+    opacity: 0.8;
+}
+
+.hero-logo {
+        position: absolute;
+        right: 50px; 
+        bottom: -60px; 
+        width: 250px;
+        height: auto;
+        z-index: 3; 
+}
+.presentation h2{
+    text-align: center;
+    margin-top: 3%
+}
+.presentation p {
+    font-size: 20px;
+    color: #555;
+    max-width: 80%; 
+    margin: 4px auto 50px; 
+    text-align: center; 
+    line-height: 1.6; 
+}
+.subrayer {
+    width: 67px;
+    height: 4px;
+    background-color: #f89c35; /* Color naranja */
+    margin-top: 7px; /* Espacio entre título y subrayado */
+    margin-left: 35%; /* Alinea el subrayado a la izquierda del título */
+    display: block; 
+}
+
+.features.button{
+    display: flex;
+  display: block; 
+  width: 200px; 
+  height: 50px; 
+  margin: 20px auto; 
+  padding: 10px 20px; 
+  font-size: 16px; 
+  text-align: center; 
+  background-color: #0aa0e0;
+  color: white; 
+  border: none; 
+  border-radius: 5px; 
+  cursor: pointer; 
+  transition: transform 0.2s ease-in-out; 
+}
+
+.features {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 60px 20px;
+}
+
+/* Estilo para el subtítulo */
+.subtitle {
+    font-weight: bold;
+    font-size: 16px;
+    color: #0aa0e0; 
+    font-weight: 500;
+    margin-bottom: 0px; 
+}
+
+/* Estilo para el título */
+.title {
+    font-weight: bold;
+    font-size: 32px;
+    color: #383636; 
+    font-weight: 700;
+    margin-top: 0px; 
+    margin-bottom: 0px; 
+}
+
+/* Línea decorativa debajo del título */
+.subrayado {
+    width: 100px;
+    height: 4px;
+    background-color: #f89c35; /* Color naranja */
+    margin-top: 0px; /* Espacio entre título y subrayado */
+    display: block; 
+}
+
+
+/* Estilo para la descripción */
+.description {
+    font-size: 18px;
+    color: #666;
+    max-width: 750px;
+    margin-top: 10px;
+    line-height: 1.6;
+}
+
+.content-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    padding: 40px;
+}
+
+.carousel {
+    width: 100%;
+    max-width: 500px;
+    height: auto; /* Permite que la altura se ajuste automáticamente */
+    display: flex;
+    align-items: left;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.carousel-images {
+    display: flex;
+    width: 100%;
+    height: auto; /* Ajusta la altura según la imagen */
+}
+
+.slide {
+    display: none;
+    width: 100%;
+    height: auto; /* Permite que la imagen mantenga su proporción */
+    object-fit: contain; /* Muestra la imagen completa sin recortarla */
+}
+
+.slide.active {
+    display: block;
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 24px;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+.features-container {
+    flex: 1;
+    max-width: 450px;
+    overflow: hidden;
+    position: relative;
+}
+
+.features {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.feature-card {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    text-align: left;
+    transition: transform 0.3s ease;
+    max-width: 500px;
+    width: 100%;
+    border-left: 6px solid #00C6C6; /* Línea lateral en azul */
+    position: relative;
+}
+
+.feature-icon {
+    background: #E5FAFA; /* Fondo azul claro */
+    border-radius: 50%;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    margin-right: 15px;
+}
+
+.feature-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.feature-title {
+    font-weight: bold;
+    font-size: 18px;
+    color: #333;
+}
+
+.feature-description {
+    font-size: 14px;
+    color: #666;
+}
+

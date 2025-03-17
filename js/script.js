@@ -105,9 +105,10 @@ document.addEventListener('DOMContentLoaded', function() {
             updateCarousel();
         });
     });
+});
 
-    // Actualizar el carrusel inicialmente
-    updateCarousel();
+
+
 
     // Auto-rotación (opcional)
     setInterval(nextSlide, 5000); // Cambia cada 5 segundos
@@ -159,3 +160,4 @@ document.addEventListener("DOMContentLoaded", function () {
     track.addEventListener("mouseleave", startAutoSlide);
     startAutoSlide();
 });
+
