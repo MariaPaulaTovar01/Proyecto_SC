@@ -1,0 +1,183 @@
+{
+    
+      "Firma Digital y Certificados":{
+      "Descripcion":"Esta categoría abarca soluciones integrales para la creación, gestión y validación de firmas digitales y certificados electrónicos. Incluye herramientas para la firma de contratos digitales, gestión de flujos de trabajo de firmas, infraestructura de clave pública (PKI) y almacenamiento seguro de claves. El objetivo es proporcionar seguridad y validez jurídica a las transacciones y documentos electrónicos.",
+      "Productos": [
+        {
+          "imageUrl": "/img/IMG-SERVICIOS/eLogic-contact.png",
+          "title": "eLogic Contract",
+          "description": "Contratos Digitales",
+          "details": "Crear y firmar contratos electrónicos con validez jurídica.",
+          "link": "#"
+        },
+        {
+          "imageUrl": "/img/IMG-SERVICIOS/eLogic-Workflow.png",
+          "title": "eLogic Workflow",
+          "description": "Flujo de Firmas Digitales",
+          "details": "Administración y gestión de certificados de firma digital",
+          "link": "#"
+        },
+        {
+          "imageUrl": "/img/IMG-SERVICIOS/Euclides.png",
+          "title": "Euclides",
+          "description": "Plataforma PKI",
+          "details": "Gestión y emisión de certificados digitales bajo infraestructura PKI",
+          "link": "#"
+        },
+        {
+          "imageUrl": "/img/IMG-SERVICIOS/eLogic-RA.png",
+          "title": "eLogic RA",
+          "description": "Certificados Electrónicos",
+          "details": "Plataforma que representa una disminución significativa de costos.",
+          "link": "#"
+        },
+        {
+          "imageUrl": "/img/IMG-SERVICIOS/eLogic-Token.png",
+          "title": "eLogic Token",
+          "description": "Almacenamiento Seguro",
+          "details": "Almacenamiento seguro de llaves privadas y públicas.",
+          "link": "#"
+        },
+        {
+          "imageUrl": "/img/IMG-SERVICIOS/Kronos.png",
+          "title": "Kronos",
+          "description": "Estampado Cronológico",
+          "details": "Estampado cronológico de acuerdo al estandar RFC 3161.",
+          "link": "#"
+        },
+        {
+          "imageUrl": "/img/IMG-SERVICIOS/eLogic-Monitor.png",
+          "title": "eLogic Monitor",
+          "description": "API Firma Digital",
+          "details": "Firme digitalmente documentos y transacciones en formularios Web.",
+          "link": "#"
+        },
+        {
+          "imageUrl": "/img/IMG-SERVICIOS/eLogic-Desktop.png",
+          "title": "eLogic Desktop",
+          "description": "Validación y Firmas Digitales",
+          "details": "Firma Digital, Estampado Cronológico y Criptografía.",
+          "link": "#"
+        },
+        {
+          "imageUrl": "/img/IMG-SERVICIOS/eLogic-Virtual-Interface.png",
+          "title": "eLogic Virtual Interface",
+          "description": "Firma Digital Windows",
+          "details": "Integración de firma digital centralizada en Windows.",
+          "link": "#"
+        }
+      ]
+    },
+      "Identidad y Biometría":{
+        "Descripcion":"En esta categoría se encuentran productos enfocados en la verificación de identidad y la autenticación biométrica. Se ofrecen soluciones de reconocimiento facial, verificación de documentos de identidad y herramientas para garantizar la autenticidad de los usuarios. Estas soluciones buscan fortalecer la seguridad y prevenir el fraude en procesos de identificación.",
+        "Productos": [
+        {
+          "imageUrl": "/img/IMG-SERVICIOS/eLogicBiometrics.png",
+          "title": "eLogic Biometrics",
+          "description": "Reconocimiento Facial",
+          "details": "Verficación biométrica y documental.",
+          "link": "#"
+        },
+        {
+          "imageUrl": "/img/IMG-SERVICIOS/eLogic-KeyMaker.png",
+          "title": "eLogic KeyMaker",
+          "description": "Autenticidad de Usuario",
+          "details": "Permite verificar la autentificar de un usuario.",
+          "link": "#"
+        },
+        {
+          "imageUrl": "/img/IMG-SERVICIOS/eLogic-ID.png",
+          "title": "eLogic ID",
+          "description": "Verificación de Identidad",
+          "details": "Verifique el usuario a través de su documento de identidad.",
+          "link": "#"
+        }
+      ],
+      "Facturación y Nómina Electrónica":{ 
+        "Descripcion":"Esta categoría ofrece soluciones para la gestión de facturación y nómina electrónica, cumpliendo con los requisitos legales y fiscales. Se facilita la creación y envío de facturas electrónicas, así como la emisión y gestión de nóminas electrónicas, simplificando los procesos administrativos y garantizando la conformidad con las normativas vigentes.",
+      "Productos":[
+        {
+          "imageUrl": "/img/IMG-SERVICIOS/Abaco.png",
+          "title": "Ábaco",
+          "description": "Facturación Electrónica",
+          "details": "Facilitamos la creación y envío de sus facturas electrónicas.",
+          "link": "#"
+        },
+        {
+          "imageUrl": "/img/IMG-SERVICIOS/eLogic-Abaco-Assambler.png",
+          "title": "Ábaco Assambler",
+          "description": "Nómina Electrónica",
+          "details": "Emisión y gestión de nómina electrónica de acuerdo a la DIAN.",
+          "link": "#"
+        }
+      ]
+    }
+    },
+      "Seguridad y Custodia de Datos":{ 
+      "Descripcion":"Esta categoría se centra en la protección y custodia de datos electrónicos. Se ofrecen soluciones para la validación y almacenamiento seguro de mensajes de datos, así como plataformas de comunicaciones certificadas y correo electrónico seguro. El objetivo es garantizar la integridad, confidencialidad y disponibilidad de la información sensible.",  
+      "Productos":[
+        {
+          "imageUrl": "/img/IMG-SERVICIOS/Ares.png",
+          "title": "Ares",
+          "description": "Custodia de Datos",
+          "details": "Validación y alamcenamiento de mensajes de datos electrónicos.",
+          "link": "#"
+        },
+        {
+          "imageUrl": "/img/IMG-SERVICIOS/SCMail.png",
+          "title": "SCMail",
+          "description": "Correo Electrónico",
+          "details": "Plataforma unificada de comunicaciones certificadas.",
+          "link": "#"
+        },
+        {
+          "imageUrl": "/img/IMG-SERVICIOS/correo.png",
+          "title": "Correo Electrónico Seguro",
+          "description": "Comunicaciones Seguras",
+          "details": "Envío de comunicaciones seguras vía correo electrónico.",
+          "link": "#"
+        }
+      ]
+    },
+      "Otros Servicios":{ 
+      "Descripcion":"Esta categoría incluye una variedad de servicios adicionales que complementan las soluciones principales. Se ofrecen plataformas para subastas electrónicas, interoperabilidad con servicios gubernamentales, gestión de pagarés electrónicos, edición y construcción de documentos PDF en línea, y captura inteligente de datos mediante inteligencia artificial. Estos servicios buscan cubrir diversas necesidades de digitalización y automatización de procesos.",
+      "Productos":[
+        {
+          "imageUrl": "/img/IMG-SERVICIOS/eAuction.png",
+          "title": "eAuction",
+          "description": "Subasta electrónica",
+          "details": "Proceso de compra y venta de bienes y servicios.",
+          "link": "#"
+        },
+        {
+          "imageUrl": "/img/IMG-SERVICIOS/eLogic-X-road.png",
+          "title": "eLogic XRoad",
+          "description": "Interoperabilidad",
+          "details": "Conexión de servicios(Rest o SOAP) expuestos por el gobierno.",
+          "link": "#"
+        },
+        {
+          "imageUrl": "/img/IMG-SERVICIOS/pagare.png",
+          "title": "Pagaré Electrónico",
+          "description": "Gestión de Pagarés",
+          "details": "Plataforma de gestión de pagarés en formato electrónico.",
+          "link": "#"
+        },
+        {
+          "imageUrl": "/img/IMG-SERVICIOS/pdfBuilder.png",
+          "title": "PDF Builder",
+          "description": "Edición y Contrucción de PDFS en línea",
+          "details": "Visualización, creación y edición de documentos en formato PDF.",
+          "link": "#"
+        },
+        {
+          "imageUrl": "/img/IMG-SERVICIOS/eAPICrypt.png",
+          "title": "eLogic AI",
+          "description": "Captura Inteligente de Datos",
+          "details": "Generación de insights a partir de información y documentos no estructurados.",
+          "link": "#"
+        }
+      ]
+    }
+    
+  }

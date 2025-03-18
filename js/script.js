@@ -114,7 +114,7 @@ document.addEventListener('DOMContentLoaded', function() {
     setInterval(nextSlide, 5000); // Cambia cada 5 segundos
     /* JavaScript */
 
-});
+
 document.addEventListener("DOMContentLoaded", function () {
     const track = document.querySelector(".carousel-track");
     const images = Array.from(document.querySelectorAll(".carousel-track img"));
