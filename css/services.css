@@ -156,6 +156,7 @@ nav {
     background-color: var(--hover-color);
 }
 
+
 /* Hero Section */
 .hero {
     position: relative;
@@ -513,4 +514,280 @@ footer {
 
 .footer-bottom a:hover {
     text-decoration: underline;
+}
+
+/* Estilos para el navbar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative; /* Asegura que el menú desplegable se posicione correctamente */
+}
+
+/* Estilos para el ícono de hamburguesa */
+.menu-icon {
+    display: none; /* Oculta el ícono por defecto */
+    cursor: pointer;
+    font-size: 24px;
+    color: var(--dark-text);
+}
+
+/* Estilos para el menú desplegable */
+.nav-links {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    gap: 15px;
+    transition: max-height 0.5s ease-in-out, opacity 0.3s ease-in-out;
+    overflow: hidden;
+}
+
+/* Estilos para pantallas pequeñas */
+@media (max-width: 768px) {
+    .menu-icon {
+        display: block; /* Muestra el ícono de hamburguesa */
+    }
+
+    .nav-links {
+        display: none; /* Oculta el menú por defecto */
+        flex-direction: column;
+        width: 100%;
+        background-color: var(--light-bg);
+        position: absolute;
+        top: 100%; /* Posiciona el menú justo debajo del navbar */
+        left: 0;
+        max-height: 0;
+        opacity: 0;
+        visibility: hidden;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav-links.active {
+        display: flex; /* Muestra el menú cuando está activo */
+        max-height: 500px; /* Ajusta este valor según la altura de tu menú */
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+    }
+
+    .nav-links a {
+        padding: 10px;
+        width: 100%;
+        text-align: center;
+    }
+
+    .contact-btn {
+        width: 100%;
+        text-align: center;
+    }
+}
+/* Media Queries para Responsive Design */
+@media (max-width: 1200px) {
+    .hero-text h1 {
+        font-size: 3em;
+    }
+
+    .hero-text p {
+        font-size: 1.1em;
+    }
+
+    .footer-container {
+        max-width: 1000px;
+    }
+}
+
+@media (max-width: 992px) {
+    .hero-text h1 {
+        font-size: 2.5em;
+    }
+
+    .hero-text p {
+        font-size: 1em;
+    }
+
+    .category-menu ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .category-menu a {
+        padding: 8px 15px;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-logo,
+    .footer-links,
+    .footer-info {
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    /* Top Bar */
+    .top-bar {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+
+    .contact-info {
+        margin-bottom: 10px;
+        text-align: center;
+    }
+
+    .social-links span {
+        display: none; /* Oculta el texto "Síguenos" */
+    }
+
+    /* Navbar */
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+    }
+
+    .menu-icon {
+        display: block; /* Muestra el ícono de hamburguesa */
+        position: absolute;
+        top: 20px;
+        right: 20px;
+    }
+
+    .nav-links {
+        display: none; /* Oculta el menú por defecto */
+        flex-direction: column;
+        width: 100%;
+        background-color: var(--light-bg);
+        position: absolute;
+        top: 80px;
+        left: 0;
+        z-index: 1000;
+    }
+
+    .nav-links.active {
+        display: flex; /* Muestra el menú cuando está activo */
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+    }
+
+    .nav-links a {
+        padding: 10px;
+        width: 100%;
+        text-align: center;
+    }
+
+    .contact-btn {
+        width: 100%;
+        text-align: center;
+    }
+
+    /* Hero Section */
+    .hero-text h1 {
+        font-size: 2em;
+    }
+
+    .hero-text p {
+        font-size: 0.9em;
+    }
+
+    /* Servicios Section */
+    .swiper-slide {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+        display: none; /* Oculta los botones de navegación en móviles */
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-text h1 {
+        font-size: 1.8em;
+    }
+
+    .hero-text p {
+        font-size: 0.8em;
+    }
+
+    .btn {
+        padding: 10px 20px;
+        font-size: 0.9em;
+    }
+
+    .category-menu ul {
+        gap: 10px;
+    }
+
+    .category-menu a {
+        padding: 6px 12px;
+        font-size: 0.9em;
+    }
+
+    .footer-logo img {
+        width: 80px;
+    }
+
+    .footer-links h3,
+    .footer-info h3 {
+        font-size: 14px;
+    }
+
+    .footer-links ul li a,
+    .footer-info p {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-text h1 {
+        font-size: 1.5em;
+    }
+
+    .hero-text p {
+        font-size: 0.7em;
+    }
+
+    .btn {
+        padding: 8px 15px;
+        font-size: 0.8em;
+    }
+
+    .category-menu ul {
+        gap: 5px;
+    }
+
+    .category-menu a {
+        padding: 4px 8px;
+        font-size: 0.8em;
+    }
+
+    .footer-logo img {
+        width: 60px;
+    }
+
+    .footer-links h3,
+    .footer-info h3 {
+        font-size: 12px;
+    }
+
+    .footer-links ul li a,
+    .footer-info p {
+        font-size: 10px;
+    }
 }
