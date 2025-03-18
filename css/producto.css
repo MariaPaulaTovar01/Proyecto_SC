@@ -81,14 +81,22 @@
     opacity: 0.8;
 }
 
-.hero-logo {
-        position: absolute;
-        right: 50px; 
-        bottom: -60px; 
-        width: 250px;
-        height: auto;
-        z-index: 3; 
+.hero {
+    position: relative; /* Asegura que el .hero sea el punto de referencia */
+    overflow: visible; /* Permite que la imagen sobresalga */
 }
+
+.hero-logo {
+    position: absolute;
+    right: 5%; /* Ajusta este valor según el espacio deseado */
+    bottom: -20%; /* Ajusta cuánto sobresale en .presentation */
+    transform: none; /* Eliminamos el centrado */
+    max-width: 100%; 
+    height: auto;
+    z-index: 2;
+}
+
+
 .presentation h2{
     text-align: center;
     margin-top: 3%
@@ -169,6 +177,16 @@
 
 
 /* Estilo para la descripción */
+.contact {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin: 0 auto;
+}
+
 .description {
     font-size: 18px;
     color: #666;
@@ -184,45 +202,52 @@
     gap: 40px;
     padding: 40px;
 }
-
 .carousel {
     width: 100%;
     max-width: 500px;
-    height: auto; /* Permite que la altura se ajuste automáticamente */
+    height: auto;
     display: flex;
-    align-items: left;
+    align-items: center;
     justify-content: center;
     position: relative;
     overflow: hidden;
+    position: relative;
+    left: -100px; /* Ajusta este valor según necesites */
+    height: 400px; /* Fija la altura */
 }
 
 .carousel-images {
     display: flex;
     width: 100%;
-    height: auto; /* Ajusta la altura según la imagen */
+    height: auto;
+    position: relative;
 }
 
 .slide {
-    display: none;
+    display: none; /* Oculta todas las imágenes por defecto */
     width: 100%;
-    height: auto; /* Permite que la imagen mantenga su proporción */
-    object-fit: contain; /* Muestra la imagen completa sin recortarla */
+    height: auto;
+    object-fit: contain;
 }
 
-.slide.active {
-    display: block;
+.slide:first-child {
+    display: block; /* Solo la primera imagen visible */
 }
-
+/* Estilos para las flechas de navegación */
 .prev, .next {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background: rgba(0, 0, 0, 0.5);
-    color: white;
+    background: none;
     border: none;
-    padding: 10px 15px;
     cursor: pointer;
-    font-size: 24px;
+    font-size: 30px; /* Tamaño del icono */
+    color: #ff8c32; /* Color naranja como en la imagen */
+    transition: transform 0.3s ease;
+}
+
+.prev:hover, .next:hover {
+    transform: translateY(-50%) scale(1.2); /* Efecto al pasar el cursor */
 }
 
 .prev {
@@ -232,11 +257,11 @@
 .next {
     right: 10px;
 }
+
 .features-container {
-    flex: 1;
-    max-width: 450px;
-    overflow: hidden;
-    position: relative;
+    max-width: 600px; /* Aumenta el tamaño del contenedor */
+    width: 100%;
+    margin: 0 auto; /* Centrado */
 }
 
 .features {
@@ -246,46 +271,366 @@
     gap: 20px;
     padding: 20px;
 }
-
 .feature-card {
-    background: white;
-    padding: 20px;
-    border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(to bottom, #ffffff, #f8fcfc); 
+    padding: 25px;
+    border-radius: 16px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
     display: flex;
-    align-items: center;
+    flex-direction: column; /* Asegura que el título esté arriba y el texto abajo */
+    align-items: flex-start; 
     text-align: left;
     transition: transform 0.3s ease;
-    max-width: 500px;
+    max-width: 550px;
     width: 100%;
-    border-left: 6px solid #00C6C6; /* Línea lateral en azul */
+    min-height: 120px;
+    border-left: none; 
     position: relative;
+    border: 1px solid rgba(0, 0, 0, 0.05); 
+    gap: 15px; 
 }
 
-.feature-icon {
-    background: #E5FAFA; /* Fondo azul claro */
-    border-radius: 50%;
-    padding: 15px;
+/* Ajustamos el contenedor del icono y el título */
+.feature-header {
     display: flex;
     align-items: center;
-    justify-content: center;
-    font-size: 24px;
-    margin-right: 15px;
+    gap: 15px; /* Espacio entre el icono y el título */
 }
 
+/* Icono en círculo */
+.feature-icon {
+    width: 50px;  /* Ajusta el tamaño de la imagen */
+    height: 50px;
+    object-fit: contain; /* Evita que se deforme */
+    border-radius: 50%; /* Opcional si quieres que tenga forma de círculo */
+    background: #E5FAFA;
+    padding: 10px;
+}
+
+/* Contenedor del contenido */
 .feature-content {
     display: flex;
     flex-direction: column;
+    justify-content: flex-start;
+    width: 100%;
 }
 
+/* Título arriba */
 .feature-title {
     font-weight: bold;
-    font-size: 18px;
+    font-size: 20px;
     color: #333;
 }
 
+/* Descripción abajo */
 .feature-description {
-    font-size: 14px;
+    font-size: 16px;
     color: #666;
+    line-height: 1.4;
+    margin-top: 8px; /* Espaciado entre el título y la descripción */
+}
+.contact {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #ffffff;
+    padding: 20px 40px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    font-family: 'Arial', sans-serif;
+    max-width: 1000px;
+    margin: 40px auto;
 }
 
+.contact-text {
+    max-width: 600px;
+}
+
+.contact h2 {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+.contact p {
+    font-size: 0.95em;
+    color: #777;
+    margin-bottom: 5px;
+}
+
+.contact a {
+    color: #00a5c0;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.contact a:hover {
+    text-decoration: underline;
+}
+
+/* Botón estilo imagen */
+.contact-button {
+    background: #00B6D1;
+    color: white;
+    font-size: 0.9em;
+    font-weight: bold;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    transition: all 0.3s ease-in-out;
+    
+}
+
+.contact-button:hover {
+    background: #008ca0;
+    transform: scale(1.05);
+}
+
+/* Icono dentro del botón */
+.contact-button img {
+    width: 16px;
+    height: 16px;
+}
+
+
+.footer-logo img {
+    width: 130px; /* Tamaño del logo */
+    margin-bottom: 10px;
+}
+
+.footer-logo p {
+    margin: 5px 0;
+    font-size: 14px;
+    color: #333;
+}
+
+.social-icons {
+    margin-top: 10px;
+}
+
+.social-icons a {
+    margin: 0 5px;
+    color: #333;
+    font-size: 16px;
+}
+
+.footer-links, .footer-info {
+    text-align: left;
+}
+
+.footer-links h3, .footer-info h3 {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 5px;
+    border-bottom: 2px solid #d97706; /* Línea naranja debajo del título */
+    display: inline-block;
+    padding-bottom: 2px;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links ul li {
+    margin: 5px 0;
+}
+
+.footer-links ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 14px;
+}
+
+.footer-info p {
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+.footer-info img {
+    width: 14px;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    padding-top: 10px;
+    font-size: 13px;
+    border-top: 1px solid #ccc;
+}
+
+.footer-bottom a {
+    text-decoration: none;
+    color: #007bff;
+}
+
+
+/* Estilos responsivos generales */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+.hero {
+    width: 100%;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: left;
+    padding-left: 12%;
+    position: relative;
+}
+
+.hero-content {
+    max-width: 500px;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+}
+
+.hero-content p {
+    font-size: 1.3rem;
+}
+
+.buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+}
+
+.button {
+    min-width: 150px;
+    text-align: center;
+}
+
+/* Estilos para el navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background: #333;
+    color: white;
+}
+
+.navbar .menu {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.navbar .menu li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+}
+
+.hamburger {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+@media (max-width: 1024px) {
+    .hero {
+        height: 50vh;
+        padding-left: 8%;
+    }
+    .hero-content h1 {
+        font-size: 3rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero {
+        height: 45vh;
+        padding-left: 5%;
+    }
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+    .hero-content p {
+        font-size: 1.1rem;
+    }
+    .buttons {
+        flex-direction: row;
+        justify-content: flex-start;
+    }
+    .button {
+        width: auto;
+    }
+    .presentation p {
+        font-size: 18px;
+        max-width: 80%;
+    }
+    .features {
+        flex-direction: column;
+        padding: 40px;
+    }
+    .contact {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        height: 40vh;
+        padding-left: 3%;
+    }
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+    .hero-content p {
+        font-size: 1rem;
+    }
+    .button {
+        width: auto;
+    }
+    .contact {
+        flex-direction: column;
+        padding: 15px;
+    }
+    .footer-links, .footer-info {
+        text-align: left;
+    }
+    .footer-bottom {
+        font-size: 12px;
+    }
+    /* Estilos para el menú hamburguesa en dispositivos móviles */
+    .navbar .menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background: #333;
+        padding: 10px 0;
+    }
+    .navbar .menu.active {
+        display: flex;
+    }
+    .hamburger {
+        display: block;
+    }
+}

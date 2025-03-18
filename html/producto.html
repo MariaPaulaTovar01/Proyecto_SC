@@ -1,14 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>eLogic WorkFlow | Software para firmas</title>
-    <link rel="stylesheet" href="/css/index.css">
-    <link rel="stylesheet" href="/css/producto.css">
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/producto.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
-<header>
+<body>
+    <header>
         <div class="top-bar">
             <div class="contact-info">
                 <a href="mailto:info@software-colombia.com">
@@ -28,7 +29,7 @@
                 <a href="#" class="icon youtube"><i class="fab fa-youtube"></i></a>
                 <a href="#" class="language"><i class="fas fa-globe"></i> EN</a>
             </div>
-        </div>        
+        </div>
         <nav>
             <div class="logo-container">
                 <img src="/img/logo.png" alt="Software Colombia" class="logo">
@@ -37,107 +38,164 @@
                 <li><a href="./index.html">INICIO</a></li>
                 <li><a href="./servicios.html">NUESTROS SERVICIOS</a></li>
                 <li><a href="#">SOFTWARE A LA MEDIDA</a></li>
-                <li><a href="#">CLIENTES</a></li>
+                <li><a href="https://software-colombia.com/clientes/">CLIENTES</a></li>
                 <li><a href="https://software-colombia.com/nosotros/">NOSOTROS</a></li>
-                <li><a href="#">BLOG</a></li>
-                <li><a href="#" class="contact-btn">CONTACTO</a></li>
+                <li><a href="https://software-colombia.com/noticias/">BLOG</a></li>
+                <li><a href="https://software-colombia.com/contacto/" class="contact-btn">CONTACTO</a></li>
             </ul>
         </nav>
-</header>
-<body>
-     <!-- Sección Principal -->
-     <div class="hero">
+    </header>
+    
+    <!-- Sección Principal -->
+    <div class="hero">
         <div class="hero-content">
             <h1>Firma electrónica</h1>
             <p>La mejor, más fácil y rápida forma de firmar electrónicamente cualquier documento.</p>
             <div class="buttons">
                 <a href="https://elogicwf.software-colombia.com/home" class="button access">ACCESO</a>
-                <a href="#" class="button data-sheet">FICHA TECNICA</a>
+                <a href="#" class="button data-sheet">FICHA TÉCNICA</a>
             </div>
         </div>
-        <img src="./../img/eLogic-WorKflow.png" alt="Firma Electrónica" class="hero-logo">
-    </div>    
+        <img src="../img/eLogic-WorKflow.png" alt="Firma Electrónica" class="hero-logo">
+    </div>
+    
     <!-- Presentación del Servicio -->
     <section class="presentation">
         <h2 class="title">¿Qué es eLogic WorkFlow?</h2>
-        <div class="subrayer"></div>
-        <p>eLogic Workflow es una plataforma web que permite firmar digital o electrónicamente documentos en formato PDF utilizando cualquier tipo de dispositivo con conexión a Internet. Los documentos firmados digitalmente gozarán de integridad, autenticidad y no repudio de acuerdo con el ordenamiento legal definido en la ley 527 de 1999, adicionalmente respetará los estándares y lineamientos de conservación y archivo definidos por el Archivo General de la Nación.</p>
+        <div class="subrayado"></div>
+        <p>eLogic Workflow es una plataforma web que permite firmar digital o electrónicamente documentos en formato PDF utilizando cualquier tipo de dispositivo con conexión a Internet.</p>
         <button class="button features" onclick="scrollToSection('features')">Funcionalidades</button>
     </section>
+    
     <!-- Sección de Funcionalidades -->
     <section class="features">
-        <p class="subtitle">Software para Firma Digital</p>
         <h2 class="title">Funcionalidades de eLogic Workflow</h2>
         <div class="subrayado"></div>
-        <p class="description">
-            Nuestro sistema cuenta con diversas funciones que facilitan la firma de documentos.
-        </p>
-        <section class="content-container">
+        <p class="description">Nuestro sistema cuenta con diversas funciones que facilitan la firma de documentos.</p>
+        <div class="content-container">
+            
             <!-- Carrusel de imágenes -->
             <div class="carousel">
-                <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+                <button class="prev">&#10094;</button>
                 <div class="carousel-images">
-                    <img src="./../img/ordenador.jpg" class="slide active" alt="Vista en ordenador">
-                    <img src="./../img/portatil.png" class="slide" alt="Vista en portátil">
-                    <img src="./../img/tablet.png" class="slide" alt="Vista en tablet">
+                    <img src="../img/ordenador.jpg" class="slide" alt="Vista en ordenador">
+                    <img src="../img/portatil.png" class="slide" alt="Vista en portátil">
+                    <img src="../img/tablet.png" class="slide" alt="Vista en tablet">
                 </div>
-                <button class="next" onclick="moveSlide(1)">&#10095;</button>
+                <button class="next">&#10095;</button>
             </div>
+            
             <!-- Contenedor de tarjetas de características -->
             <div class="features-container">
                 <div class="features">
                     <div class="feature-card">
-                        <div class="feature-icon">🤖</div>
+                        <img src="../img/workflow_5656503-min.png" alt="Flujo Icono" class="feature-icon">
                         <div class="feature-content">
-                            <div class="feature-title">Definir Flujos</div>
-                            <div class="feature-description">Permite definir flujos de firma o co-firma de documentos con actuaciones paralelas o secuenciales de sus firmantes.</div>
+                            <strong class="feature-title">Definir Flujos:</strong>
+                            <p class="feature-description">Define flujos de firma o co-firma de documentos con actuaciones paralelas o secuenciales.</p>
                         </div>
                     </div>
+            
                     <div class="feature-card">
-                        <div class="feature-icon">✅</div>
+                        <img src="../imG/error_10382027-min.png" alt="Firma Icono" class="feature-icon">
                         <div class="feature-content">
-                            <div class="feature-title">Firma Visible</div>
-                            <div class="feature-description">Permite asociar una firma visible al documento. A esta firma visible se le podrá asociar el grafo de la firma manuscrita.</div>
+                            <strong class="feature-title">Firma Visible:</strong>
+                            <p class="feature-description">Permite asociar una firma visible al documento, incluyendo el grafo manuscrito.</p>
                         </div>
                     </div>
+            
                     <div class="feature-card">
-                        <div class="feature-icon">🔐</div>
+                        <img src="../img/intrusion_17745173-min.png" alt="Seguridad Icono" class="feature-icon">
                         <div class="feature-content">
-                            <div class="feature-title">Seguridad Avanzada</div>
-                            <div class="feature-description">El sistema garantiza la seguridad mediante cifrado avanzado y autenticación de usuarios.</div>
+                            <strong class="feature-title">Seguridad Avanzada:</strong>
+                            <p class="feature-description">Garantiza la seguridad mediante cifrado avanzado y autenticación de usuarios.</p>
                         </div>
                     </div>
+            
                     <div class="feature-card">
-                        <div class="feature-icon">📄</div>
+                        <img src="../img/folder-management_17365461-min.png" alt="Documentos Icono" class="feature-icon">
                         <div class="feature-content">
-                            <div class="feature-title">Gestión de Documentos</div>
-                            <div class="feature-description">Administra documentos de manera eficiente con categorización automática y fácil acceso.</div>
+                            <strong class="feature-title">Gestión de Documentos:</strong>
+                            <p class="feature-description">Administra documentos con categorización automática y fácil acceso.</p>
                         </div>
                     </div>
+            
                     <div class="feature-card">
-                        <div class="feature-icon">🌎</div>
+                        <img src="../img/internet-security_17307283-min.png" alt="Global Icono" class="feature-icon">
                         <div class="feature-content">
-                            <div class="feature-title">Acceso Global</div>
-                            <div class="feature-description">Disponible en cualquier parte del mundo con acceso seguro a los documentos.</div>
+                            <strong class="feature-title">Acceso Global:</strong>
+                            <p class="feature-description">Disponible en cualquier parte del mundo con acceso seguro.</p>
                         </div>
                     </div>
+            
                     <div class="feature-card">
-                        <div class="feature-icon">💾</div>
+                        <img src="../img/reboot_17731917-min.png" alt="Respaldo Icono" class="feature-icon">
                         <div class="feature-content">
-                            <div class="feature-title">Respaldo Automático</div>
-                            <div class="feature-description">Los documentos se respaldan automáticamente en la nube para evitar pérdidas.</div>
+                            <strong class="feature-title">Respaldo Automático:</strong>
+                            <p class="feature-description">Documentos respaldados automáticamente en la nube.</p>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>    
+            
+        </div>
+    </section>
+    
     <!-- Contacto -->
     <section class="contact">
-        <h2>¿Interesado en WorkFlow?</h2>
-        <p>Contáctanos para más información y adquiere nuestro servicio hoy mismo.</p>
-        <button onclick="window.location.href='contacto.html'">Contáctanos</button>
+        <div class="contact-text">
+            <h2>¿Quiere adquirir eLogic Workflow u obtener más información?</h2>
+            <p>Escríbanos a <a href="mailto:workflow@software-colombia.atlassian.net">workflow@software-colombia.atlassian.net</a> 
+            o diligencie el formulario de «<a href="#">Contáctenos</a>».</p>
+        </div>
+        <button class="contact-button">PORTAL DE SERVICIO</button>
     </section>
-</body>
-</html>
+    
+    <!--Footer-->
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-logo">
+                <img src="../img/logo.png" alt="Software Colombia">
+                <p>Nit. 900.364.710-8</p>
+                <p>Régimen Común Actividad Económica 6201</p>
+                <div class="social-icons">
+                    <a href="#" class="icon facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="#" class="icon twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="icon linkedin"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" class="icon instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="icon youtube"><i class="fab fa-youtube"></i></a>
+                    <a href="#" class="language"><i class="fas fa-globe"></i></a>
+                </div>
+            </div>
+    
+            <div class="footer-links">
+                <h3>Nuestro website</h3>
+                <ul>
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="#">Nosotros</a></li>
+                    <li><a href="#">Servicios</a></li>
+                    <li><a href="#">Noticias</a></li>
+                    <li><a href="#">Contacto</a></li>
+                </ul>
+            </div>
+    
+            <div class="footer-info">
+                <h3>Información de interés</h3>
+                <p>Calle 31 No. 13A – 51 Torre 1 Oficina 301<br>Edificio Panorama</p>
+                <p><img src="../img/phone-call_7229376-min.png" alt="Teléfono"> <a href="tel:+576013082152">+(57)(601) 308-2152</a></p>
+                <p><img src="../img/e-mail_11386114-min.png" alt="Email"> <a href="mailto:info@software-colombia.com">info@software-colombia.com</a></p>
+                <p>Recepción de Facturas:</p>
+                <p><img src="../img/e-mail_11386114-min.png" alt="Email"> <a href="mailto:900364710@scol.com.co">900364710@scol.com.co</a></p>
+            </div>
+        </div>
+    
+        <div class="footer-bottom">
+            <p>2021 - © Todos los derechos reservados Software Colombia.</p>
+            <a href="#">Privacidad y tratamiento de datos personales.</a>
+        </div>
+    </footer>
+    
+    <script src="/js/producto.js"></script>
 </body>
 </html>
