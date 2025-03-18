@@ -553,13 +553,40 @@ p {
     background-color: #008c9e;
 }
 
-.clientes {
+.customer-gallery {
     padding: 40px 20px;
     max-width: 1200px;
     margin: auto;
+    text-align: center;
 }
 
-.carousel-container {
+.customer-title {
+    font-size: 2.5em;
+    margin-bottom: 15px;
+    position: relative;
+    display: inline-block;
+}
+
+.customer-title::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -5px;
+    width: 150px;
+    height: 3px;
+    background-color: orange;
+    transform: translateX(-50%);
+}
+
+.customer-description {
+    font-size: 1.2em;
+    color: #666;
+    margin: 20px auto;
+    max-width: 800px;
+}
+
+
+.customer-slider {
     position: relative;
     display: flex;
     align-items: center;
@@ -567,33 +594,28 @@ p {
     overflow: hidden;
     max-width: 100%;
     margin: auto;
+    padding: 0 40px; /* Añade padding para los botones */
 }
 
-.carousel-track-wrapper {
-    overflow: hidden;
-    width: 80%;
-    max-width: 1000px;
-}
-
-.carousel-track {
+.slider-track {
     display: flex;
     transition: transform 0.5s ease-in-out;
     width: max-content;
     align-items: center;
 }
 
-.carousel-track img {
-    max-width: 150px;
-    margin: 0 25px;
+.slider-track img {
+    max-width: 200px;
+    margin: 0 15px;
     filter: grayscale(100%);
     transition: filter 0.3s ease-in-out;
 }
 
-.carousel-track img:hover {
+.slider-track img:hover {
     filter: grayscale(0%);
 }
 
-.arrow {
+.slider-arrow {
     position: absolute;
     background: none;
     border: none;
@@ -602,16 +624,16 @@ p {
     color: orange;
     top: 50%;
     transform: translateY(-50%);
+    z-index: 10;
 }
 
-#prev {
+#customer-prev {
     left: 10px;
 }
 
-#next {
+#customer-next {
     right: 10px;
 }
-
 footer {
     background-color: #e3f2f7;
     padding: 40px 20px;
@@ -717,169 +739,3 @@ footer {
 .footer-bottom a:hover {
     text-decoration: underline;
 }
-
-/* Media Queries para Responsive Design */
-
-@media (max-width: 1200px) {
-    .hero-content {
-        max-width: 50%;
-    }
-
-    .company-section {
-        padding: 40px;
-    }
-
-    .company-section img {
-        width: 50%;
-    }
-
-    .company-content {
-        width: 50%;
-    }
-}
-
-@media (max-width: 992px) {
-    .hero-content {
-        max-width: 60%;
-    }
-
-    .company-section {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-
-    .company-section img {
-        width: 80%;
-        margin-bottom: 20px;
-    }
-
-    .company-content {
-        width: 80%;
-        text-align: center;
-    }
-
-    .company-content h2 {
-        margin: 0 auto 20px;
-    }
-
-    .services-container {
-        gap: 20px;
-    }
-
-    .service-card {
-        width: 45%;
-    }
-
-    .special-container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .service-card.special {
-        width: 80%;
-    }
-}
-
-@media (max-width: 768px) {
-    .top-bar {
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 10px;
-    }
-
-    .contact-info {
-        margin-bottom: 10px;
-    }
-
-    .hero-content {
-        max-width: 80%;
-    }
-
-    .hero-title {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .hero-title .logo {
-        margin-bottom: 20px;
-    }
-
-    .nav-links {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .nav-links li {
-        margin: 10px 0;
-    }
-
-    .services-container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .service-card {
-        width: 80%;
-    }
-
-    .carousel-controls {
-        right: 5%;
-    }
-
-    .carousel-track img {
-        max-width: 100px;
-        margin: 0 15px;
-    }
-
-    .footer-container {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-
-    .footer-links,
-    .footer-info {
-        margin-top: 20px;
-    }
-}
-
-@media (max-width: 576px) {
-    .hero-content {
-        max-width: 90%;
-    }
-
-    .hero-title .correo {
-        font-size: 2em;
-    }
-
-    .hero-title .certificado {
-        font-size: 3em;
-    }
-
-    .hero-description {
-        font-size: 1.2em;
-    }
-
-    .cta-button {
-        padding: 15px 25px;
-        font-size: 1em;
-    }
-
-    .service-card {
-        width: 100%;
-    }
-
-    .carousel-track img {
-        max-width: 80px;
-        margin: 0 10px;
-    }
-
-    .footer-logo img {
-        width: 80px;
-    }
-
-    .footer-links,
-    .footer-info {
-        max-width: 100%;
-    }
