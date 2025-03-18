@@ -61,76 +61,94 @@ p{
 }
 
 /*Bienvendida de los servicios*/
-hero {
-    background-color: #f0f8ff; /* Un azul claro de fondo */
-    padding: 100px 20px;
+.hero {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    background-image: url('/img/IMG-SERVICIOS/BIENVENIDA/informatica.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
 .hero-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.hero-text {
-    flex: 1;
-    padding-right: 20px;
+    position: relative;
+    z-index: 1;
+    max-width: 800px;
+    padding: 20px;
 }
 
 .hero-text h1 {
-    font-size: 2.5em;
-    margin-bottom: 20px;
-    color: #007bff; /* Un azul más intenso para el título */
+    font-size: 3.5em;
+    margin-bottom: 25px;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
 }
 
 .hero-text p {
-    font-size: 1.1em;
-    line-height: 1.6;
-    margin-bottom: 30px;
+    font-size: 1.2em;
+    line-height: 1.7;
+    margin-bottom: 50px; /* Aumenta la separación */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+}
+
+.hero-text p {
+    color: white;
 }
 
 .btn {
     display: inline-block;
     background-color: #007bff;
     color: white;
-    padding: 15px 30px;
+    padding: 15px 35px;
     text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
-    transition: background-color 0.3s ease;
+    border-radius: 8px;
+    font-weight: 600;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .btn:hover {
     background-color: #0056b3;
+    transform: scale(1.05); /* Solo efecto de escala */
 }
 
-.hero-image {
-    flex: 1;
-    text-align: right;
+.highlight {
+    background-color: rgb(255, 153, 59);
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
-.hero-image img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+.highlight:hover {
+    background-color: rgb(230, 138, 53);
 }
 
-/* Estilos adicionales para hacerlo responsivo */
 @media (max-width: 768px) {
-    .hero-content {
-        flex-direction: column;
-        text-align: center;
+    .hero-text h1 {
+        font-size: 2.5em;
     }
 
-    .hero-text {
-        padding-right: 0;
-        margin-bottom: 30px;
+    .hero-text p {
+        font-size: 1em;
     }
 
-    .hero-image {
-        text-align: center;
+    .btn {
+        padding: 10px 20px;
     }
 }
